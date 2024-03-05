@@ -1,34 +1,37 @@
-<h1>Calculadora V2</h1>
-<form>
-  <div class="row mb-3">
-    <div class="col-sm-6">
-      <input type="number" class="form-control" [(ngModel)]="num1" name="num1">
+<div class="position-absolute top-50 start-50 translate-middle
+bg-light rounded-5" style="width: 50%;">
+  <h1 class="text-center mb-3">Calculadora V2</h1>
+  <form>
+    <div class="row mb-3">
+      <div class="col-sm-6">
+        <input type="number" class="form-control" [(ngModel)]="num1" name="num1">
+      </div>
+      <div class="col-sm-6">
+        <input type="number" class="form-control" [(ngModel)]="num2" name="num2">
+      </div>
     </div>
-    <div class="col-sm-6">
-      <input type="number" class="form-control" [(ngModel)]="num2" name="num2">
+    <div class="row mb-3">
+      <div class="col-sm-4">
+        <button class="btn btn-primary" (click)="sum()">+</button>
+      </div>
+      <div class="col-sm-4">
+        <button class="btn btn-primary" (click)="sub()">-</button>
+      </div>
+      <div class="col-sm-4">
+        <button class="btn btn-primary" (click)="mult()">X</button>
+      </div>
     </div>
-  </div>
-  <div class="row mb-3">
-    <div class="col-sm-4">
-      <button class="btn btn-primary" (click)="sum()">+</button>
+    <div class="row mb-3">
+      <div class="col-sm-4">
+        <button class="btn btn-primary" (click)="div()">÷</button>
+      </div>
+      <div class="col-sm-4">
+        <button class="btn btn-primary" (click)="pow()">^</button>
+      </div>
+      <div class="col-sm-4">
+        <button class="btn btn-primary" (click)="por()">%</button>
+      </div>
     </div>
-    <div class="col-sm-4">
-      <button class="btn btn-primary" (click)="sub()">-</button>
-    </div>
-    <div class="col-sm-4">
-      <button class="btn btn-primary" (click)="mult()">X</button>
-    </div>
-  </div>
-  <div class="row mb-3">
-    <div class="col-sm-4">
-      <button class="btn btn-primary" (click)="div()">÷</button>
-    </div>
-    <div class="col-sm-4">
-      <button class="btn btn-primary" (click)="pow()">^</button>
-    </div>
-    <div class="col-sm-4">
-      <button class="btn btn-primary" (click)="por()">%</button>
-    </div>
-  </div>
-  <div class="alert alert-primary" role="alert">{{result}}</div>
-</form>
+    <div class="alert alert-primary" role="alert">{{result}}</div>
+  </form>
+</div>
